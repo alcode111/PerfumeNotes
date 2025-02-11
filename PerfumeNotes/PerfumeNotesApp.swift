@@ -11,7 +11,7 @@ import SwiftUI
 struct PerfumeNotesApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NotesListView()
         }
     }
 }

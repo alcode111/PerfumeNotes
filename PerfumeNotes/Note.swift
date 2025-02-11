@@ -5,12 +5,12 @@
 //  Created by Ismaïl on 11/02/2025.
 //
 
-import Foundation
+import SwiftUI
 
-struct Note: Decodable {
+struct Note: Decodable, Identifiable {
     let id: Int
     let name: String
-    let family: String
+    let family: Family
     let position: String
     let latitude: Double
     let longitude: Double
@@ -22,4 +22,31 @@ struct Note: Decodable {
     let funFact: String
     let extraction: String
     let link: String
+    
+    var image: String {
+        name.lowercased().replacingOccurrences(of: " ", with: "")
+    }
+    
+    enum Family: String, Decodable {
+        case Citrus
+        case Floral
+        case Oriental
+        case Spicy
+        case Woody
+        
+        var background: Color {
+            switch self {
+            case .Citrus:
+                .yellow
+            case .Floral:
+                .green
+            case .Oriental:
+                .orange
+            case .Spicy:
+                .red
+            case .Woody:
+                .brown
+            }
+        }
+    }
 }
