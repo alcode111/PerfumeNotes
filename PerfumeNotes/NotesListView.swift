@@ -11,15 +11,12 @@ struct NotesListView: View {
     let notes = Notes()
     
     @State var searchText = ""
+    @State var alphabetical = false
     
     var filteredNotes: [Note] {
-        if searchText.isEmpty {
-            return notes.notes
-        } else {
-            return notes.notes.filter { note in
-                note.name.localizedCaseInsensitiveContains(searchText)
-            }
-        }
+        notes.sort(by: alphabetical)
+        
+        return notes.search(for: searchText)
     }
     
     var body: some View {
@@ -56,6 +53,18 @@ struct NotesListView: View {
             .searchable(text: $searchText)
             .autocorrectionDisabled()
             .animation(.default, value: searchText)
+            .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    Button {
+                        withAnimation {
+                            alphabetical.toggle()
+                        }
+                    } label: {
+                        Image(systemName: alphabetical ? "pyramid" : "textformat")
+                            .symbolEffect(.bounce, value: alphabetical)
+                    }
+                }
+            }
         }
     }
 }

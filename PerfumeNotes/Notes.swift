@@ -26,4 +26,20 @@ class Notes {
             }
         }
     }
+    
+    func search(for searchTerm: String) -> [Note] {
+        if searchTerm.isEmpty {
+            return notes
+        } else {
+            return notes.filter { note in
+                note.name.localizedCaseInsensitiveContains(searchTerm)
+            }
+        }
+    }
+    
+    func sort(by alphabetical: Bool) {
+        notes.sort {
+            alphabetical ? $0.name < $1.name : $0.id < $1.id
+        }
+    }
 }
