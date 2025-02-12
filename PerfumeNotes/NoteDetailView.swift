@@ -10,7 +10,9 @@ import MapKit
 
 struct NoteDetailView: View {
     let note: Note
+    
     @State var position: MapCameraPosition
+    @Namespace var namespace
     
     var body: some View {
         GeometryReader { geo in
@@ -52,7 +54,13 @@ struct NoteDetailView: View {
                     
                     // location name + location
                     NavigationLink {
-                        
+                        NoteMap(position: .camera(MapCamera(
+                            centerCoordinate: note.location,
+                            distance: 500,
+                            heading: 250,
+                            pitch: 80))
+                        )
+                        .navigationTransition(.zoom(sourceID: 1, in: namespace))
                     } label: {
                         Map(position: $position) {
                             Annotation(note.name, coordinate: note.location) {
@@ -72,6 +80,7 @@ struct NoteDetailView: View {
                                 .padding(.trailing, 4)
                         }
                     }
+                    .matchedTransitionSource(id: 1, in: namespace)
                     
                     HStack {
                         Spacer()
