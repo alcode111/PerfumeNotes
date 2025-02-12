@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct Note: Decodable, Identifiable {
     let id: Int
@@ -25,6 +26,10 @@ struct Note: Decodable, Identifiable {
     
     var image: String {
         name.lowercased().replacingOccurrences(of: " ", with: "")
+    }
+    
+    var location: CLLocationCoordinate2D {
+        CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
     }
 }
 

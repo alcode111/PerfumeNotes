@@ -6,10 +6,12 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct NoteDetailView: View {
-    
     let note: Note
+    @State var position: MapCameraPosition
+    
     var body: some View {
         GeometryReader { geo in
             ScrollView {
@@ -49,6 +51,37 @@ struct NoteDetailView: View {
                         .padding(.bottom, 32)
                     
                     // location name + location
+                    NavigationLink {
+                        
+                    } label: {
+                        Map(position: $position) {
+                            Annotation(note.name, coordinate: note.location) {
+                                Image(systemName: "mappin.and.ellipse")
+                                    .font(.largeTitle)
+                                    .imageScale(.large)
+                                    .symbolEffect(.breathe)
+                            }
+                            .annotationTitles(.hidden)
+                        }
+                        .frame(height: 125)
+                        .clipShape(.rect(cornerRadius: 16))
+                        .overlay(alignment: .trailing) {
+                            Image(systemName: "greaterthan")
+                                .imageScale(.large)
+                                .font(.title3)
+                                .padding(.trailing, 4)
+                        }
+                    }
+                    
+                    HStack {
+                        Spacer()
+                        
+                        Text(note.origin).fontWeight(.semibold)
+                        
+                        Spacer()
+                    }
+                    .padding(.bottom, 32)
+
                     
                     // Characteristics X
                     Text("Main characteristics:")
@@ -72,12 +105,18 @@ struct NoteDetailView: View {
                     }
                     
                     // Fun fact
-                    Text(note.funFact)
-                        .italic()
-                        .padding()
-                        .background(.gray.opacity(0.3))
-                        .clipShape(.rect(cornerRadius: 8))
-                        .padding(.vertical, 32)
+                    HStack {
+                        Spacer()
+                        
+                        Text(note.funFact)
+                            .italic()
+                            .padding(16)
+                            .background(.gray.opacity(0.3))
+                            .clipShape(.rect(topLeadingRadius: 16, bottomTrailingRadius: 16))
+                            .padding(.vertical, 24)
+                        
+                        Spacer()
+                    }
                     
                     // Method of extraction
                     Text("Method of extraction:")
@@ -102,9 +141,19 @@ struct NoteDetailView: View {
             }
         }
         .ignoresSafeArea()
+        .toolbarBackground(.automatic)
     }
 }
 
 #Preview {
-    NoteDetailView(note: Notes().notes[2])
+    let note = Notes().notes[2]
+    
+    NavigationStack {
+        NoteDetailView(note: note,
+                       position: .camera(
+                        MapCamera(
+                            centerCoordinate: note.location,
+                            distance: 30000
+                        )))
+    }
 }

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct NotesListView: View {
     let notes = Notes()
@@ -25,7 +26,11 @@ struct NotesListView: View {
         NavigationStack {
             List(filteredNotes) { note in
                 NavigationLink {
-                    NoteDetailView(note: note)
+                    NoteDetailView(note: note, position: .camera(
+                        MapCamera(
+                        centerCoordinate: note.location,
+                        distance: 30000
+                        )))
                 } label: {
                     HStack(spacing: 16) {
                         Image(note.image)
