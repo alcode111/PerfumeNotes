@@ -26,27 +26,51 @@ struct Note: Decodable, Identifiable {
     var image: String {
         name.lowercased().replacingOccurrences(of: " ", with: "")
     }
+}
+
+enum Family: String, Decodable, CaseIterable, Identifiable {
+    case All
+    case Citrus
+    case Floral
+    case Oriental
+    case Spicy
+    case Woody
     
-    enum Family: String, Decodable {
-        case Citrus
-        case Floral
-        case Oriental
-        case Spicy
-        case Woody
-        
-        var background: Color {
-            switch self {
-            case .Citrus:
+    var id: Family {
+        self
+    }
+    
+    var background: Color {
+        switch self {
+        case .All:
+                .black
+        case .Citrus:
                 .yellow
-            case .Floral:
+        case .Floral:
                 .green
-            case .Oriental:
+        case .Oriental:
                 .orange
-            case .Spicy:
+        case .Spicy:
                 .red
-            case .Woody:
+        case .Woody:
                 .brown
-            }
+        }
+    }
+    
+    var icon: String {
+        switch self {
+        case .All:
+            "square.grid.2x2.fill"
+        case .Citrus:
+            "moonphase.waxing.crescent.inverse"
+        case .Floral:
+            "leaf.fill"
+        case .Oriental:
+            "sun.horizon.fill"
+        case .Spicy:
+            "flame.fill"
+        case .Woody:
+            "tree.fill"
         }
     }
 }

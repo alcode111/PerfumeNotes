@@ -12,8 +12,10 @@ struct NotesListView: View {
     
     @State var searchText = ""
     @State var alphabetical = false
+    @State var currentSelection = Family.All
     
     var filteredNotes: [Note] {
+        notes.filter(by: currentSelection)
         notes.sort(by: alphabetical)
         
         return notes.search(for: searchText)
@@ -23,9 +25,7 @@ struct NotesListView: View {
         NavigationStack {
             List(filteredNotes) { note in
                 NavigationLink {
-                    Image(note.image)
-                        .resizable()
-                        .scaledToFit()
+                    NoteDetailView(note: note)
                 } label: {
                     HStack(spacing: 16) {
                         Image(note.image)
@@ -62,6 +62,18 @@ struct NotesListView: View {
                     } label: {
                         Image(systemName: alphabetical ? "pyramid" : "textformat")
                             .symbolEffect(.bounce, value: alphabetical)
+                    }
+                }
+                
+                ToolbarItem(placement: .topBarTrailing) {
+                    Menu {
+                        Picker("Filter", selection: $currentSelection.animation()) {
+                            ForEach(Family.allCases) { family in
+                                Label(family.rawValue, systemImage: family.icon)
+                            }
+                        }
+                    } label: {
+                        Image(systemName: "slider.horizontal.3")
                     }
                 }
             }
