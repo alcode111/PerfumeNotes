@@ -1,0 +1,252 @@
+[
+    {
+        "id": 1,
+        "name": "Bergamot",
+        "family": "Citrus",
+        "position": "top",
+        "latitude": 38.2085,
+        "longitude": 15.5527,
+        "description": "A bright, citrusy scent with subtle floral undertones, native to Calabria, Italy. Known for its refreshing and uplifting properties.",
+        "origin": "Italy",
+        "scientific_name": "Citrus bergamia",
+        "characteristics": [
+            "Fresh",
+            "Citrusy",
+            "Slightly Floral",
+            "Light"
+        ],
+        "pairings": [
+            "Lavender",
+            "Vanilla",
+            "Amber"
+        ],
+        "fun_fact": "Bergamot is what gives Earl Grey tea its distinctive flavor.",
+        "extraction": "Cold-pressed from the peel of the fruit",
+        "link": "https://en.wikipedia.org/wiki/Bergamot"
+    },
+    {
+        "id": 2,
+        "name": "Lavender",
+        "family": "Floral",
+        "position": "top",
+        "latitude": 43.9677,
+        "longitude": 6.1789,
+        "description": "A sweet, floral-herbaceous scent beloved for its calming and soothing properties. Primary cultivation in Provence, France.",
+        "origin": "France",
+        "scientific_name": "Lavandula angustifolia",
+        "characteristics": [
+            "Floral",
+            "Herbaceous",
+            "Clean",
+            "Fresh"
+        ],
+        "pairings": [
+            "Bergamot",
+            "Vanilla",
+            "Tonka Beans"
+        ],
+        "fun_fact": "The word lavender comes from the Latin 'lavare' meaning 'to wash'.",
+        "extraction": "Steam distillation of flowering tops",
+        "link": "https://en.wikipedia.org/wiki/Lavender"
+    },
+    {
+        "id": 3,
+        "name": "Cinnamon",
+        "family": "Spicy",
+        "position": "middle",
+        "latitude": 7.2906,
+        "longitude": 80.6337,
+        "description": "A warm, spicy aroma derived from tree bark, adding depth and warmth to fragrances. Primarily sourced from Sri Lanka.",
+        "origin": "Sri Lanka",
+        "scientific_name": "Cinnamomum verum",
+        "characteristics": [
+            "Warm",
+            "Spicy",
+            "Sweet",
+            "Woody"
+        ],
+        "pairings": [
+            "Vanilla",
+            "Tonka Beans",
+            "Amber"
+        ],
+        "fun_fact": "True cinnamon is different from cassia, which is commonly sold as cinnamon in many countries.",
+        "extraction": "Steam distillation of bark",
+        "link": "https://en.wikipedia.org/wiki/Cinnamon"
+    },
+    {
+        "id": 4,
+        "name": "Frankincense",
+        "family": "Woody",
+        "position": "middle",
+        "latitude": 15.5527,
+        "longitude": 44.2456,
+        "description": "A rich, complex woody-spicy scent with deep spiritual significance. Harvested from Boswellia trees in Yemen and Oman.",
+        "origin": "Yemen",
+        "scientific_name": "Boswellia sacra",
+        "characteristics": [
+            "Woody",
+            "Spicy",
+            "Resinous",
+            "Mysterious"
+        ],
+        "pairings": [
+            "Myrrh",
+            "Sandalwood",
+            "Rose"
+        ],
+        "fun_fact": "Has been traded in the Arabian Peninsula and North Africa for over 5000 years.",
+        "extraction": "Steam distillation of dried tree resin",
+        "link": "https://en.wikipedia.org/wiki/Frankincense"
+    },
+    {
+        "id": 5,
+        "name": "Amber",
+        "family": "Oriental",
+        "position": "base",
+        "latitude": 54.5260,
+        "longitude": 15.2551,
+        "description": "A warm, rich accord created from labdanum, vanilla, and other resins. Historical origins in Baltic region.",
+        "origin": "Baltic Region",
+        "scientific_name": "Synthetic accord",
+        "characteristics": [
+            "Warm",
+            "Sweet",
+            "Powdery",
+            "Resinous"
+        ],
+        "pairings": [
+            "Vanilla",
+            "Sandalwood",
+            "Bergamot"
+        ],
+        "fun_fact": "Unlike most ingredients, amber in perfumery is a created accord, not a natural substance.",
+        "extraction": "Blend of natural and synthetic materials",
+        "link": "https://en.wikipedia.org/wiki/Amber"
+    },
+    {
+        "id": 6,
+        "name": "Agarwood",
+        "family": "Woody",
+        "position": "base",
+        "latitude": 3.1390,
+        "longitude": 101.6869,
+        "description": "A deep, woody scent also known as oud, produced by Aquilaria trees when infected with mold. Highly valued in Middle Eastern perfumery.",
+        "origin": "Malaysia",
+        "scientific_name": "Aquilaria malaccensis",
+        "characteristics": [
+            "Woody",
+            "Deep",
+            "Complex",
+            "Animalistic"
+        ],
+        "pairings": [
+            "Rose",
+            "Sandalwood",
+            "Amber"
+        ],
+        "fun_fact": "Often called 'liquid gold' due to its high value - can be more expensive than gold by weight.",
+        "extraction": "Distillation of infected heartwood",
+        "link": "https://en.wikipedia.org/wiki/Agarwood"
+    },
+    {
+        "id": 7,
+        "name": "Tonka Beans",
+        "family": "Oriental",
+        "position": "base",
+        "latitude": 6.8013,
+        "longitude": -58.1553,
+        "description": "A sweet, vanilla-like scent with hints of cherry, almond, and cinnamon. Sourced primarily from South America.",
+        "origin": "Guyana",
+        "scientific_name": "Dipteryx odorata",
+        "characteristics": [
+            "Sweet",
+            "Vanilla-like",
+            "Nutty",
+            "Spicy"
+        ],
+        "pairings": [
+            "Vanilla",
+            "Lavender",
+            "Amber"
+        ],
+        "fun_fact": "Contains coumarin, one of the first synthetic materials used in perfumery.",
+        "extraction": "Extraction from dried beans",
+        "link": "https://en.wikipedia.org/wiki/Tonka_bean"
+    },
+    {
+        "id": 8,
+        "name": "Vanilla",
+        "family": "Oriental",
+        "position": "base",
+        "latitude": -18.7669,
+        "longitude": 46.8691,
+        "description": "A sweet, warm, and comforting scent derived from vanilla pods. Madagascar produces some of the world's finest vanilla.",
+        "origin": "Madagascar",
+        "scientific_name": "Vanilla planifolia",
+        "characteristics": [
+            "Sweet",
+            "Warm",
+            "Creamy",
+            "Gourmand"
+        ],
+        "pairings": [
+            "Tonka Beans",
+            "Amber",
+            "Lavender"
+        ],
+        "fun_fact": "It takes 3-4 years before a vanilla orchid produces beans.",
+        "extraction": "Extraction from cured pods",
+        "link": "https://en.wikipedia.org/wiki/Vanilla"
+    },
+    {
+        "id": 9,
+        "name": "Damask Rose",
+        "family": "Floral",
+        "position": "middle",
+        "latitude": 42.1537,
+        "longitude": 24.7497,
+        "description": "The queen of flowers in perfumery, known for its rich, honeyed, and spicy-floral scent. Bulgarian roses are considered the finest in the world.",
+        "origin": "Bulgaria",
+        "scientific_name": "Rosa damascena",
+        "characteristics": [
+            "Floral",
+            "Honey-like",
+            "Spicy",
+            "Rich"
+        ],
+        "pairings": [
+            "Agarwood",
+            "Frankincense",
+            "Amber"
+        ],
+        "fun_fact": "It takes about 4,000 kg of rose petals to make 1 kg of rose oil.",
+        "extraction": "Steam distillation of petals or solvent extraction",
+        "link": "https://en.wikipedia.org/wiki/Damask_rose"
+    },
+    {
+        "id": 10,
+        "name": "Sandalwood",
+        "family": "Woody",
+        "position": "base",
+        "latitude": 12.9716,
+        "longitude": 77.5946,
+        "description": "A soft, creamy woody scent with subtle sweet notes. Indian sandalwood is considered the most prestigious variety.",
+        "origin": "India",
+        "scientific_name": "Santalum album",
+        "characteristics": [
+            "Woody",
+            "Creamy",
+            "Sweet",
+            "Exotic"
+        ],
+        "pairings": [
+            "Rose",
+            "Frankincense",
+            "Vanilla"
+        ],
+        "fun_fact": "A sandalwood tree must be at least 15 years old before harvesting.",
+        "extraction": "Steam distillation of heartwood",
+        "link": "https://en.wikipedia.org/wiki/Sandalwood"
+    }
+]
