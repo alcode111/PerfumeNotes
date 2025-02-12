@@ -17,6 +17,12 @@ struct NoteDetailView: View {
                     Image(note.family.rawValue.lowercased())
                         .resizable()
                         .scaledToFit()
+                        .overlay {
+                            LinearGradient(stops: [
+                                Gradient.Stop(color: .clear, location: 0.8),
+                                Gradient.Stop(color: Color(.systemBackground), location: 1)
+                            ], startPoint: .top, endPoint: .bottom)
+                        }
                     
                     Image(note.image)
                         .resizable()
@@ -83,10 +89,11 @@ struct NoteDetailView: View {
                     Text("Read more:")
                         .font(.caption)
                         .padding(.top, 16)
-
+                    
                     // Link
                     Link(note.link, destination: URL(string: note.link) ?? URL(string: "https://www.wikipedia.org/")!)
                         .font(.caption)
+                        .foregroundStyle(.blue)
                 }
                 .padding(.top, 32)
                 .padding(16)
