@@ -20,7 +20,7 @@
             "Vanilla",
             "Amber"
         ],
-        "fun_fact": "Bergamot is what gives Earl Grey tea its distinctive flavor",
+        "fun_fact": "Bergamot is what gives Earl Grey tea its distinctive flavor.",
         "extraction": "Cold-pressed from the peel of the fruit",
         "link": "https://en.wikipedia.org/wiki/Bergamot"
     },
@@ -45,7 +45,7 @@
             "Vanilla",
             "Tonka Beans"
         ],
-        "fun_fact": "The word lavender comes from the Latin 'lavare' meaning 'to wash'",
+        "fun_fact": "The word lavender comes from the Latin 'lavare' meaning 'to wash'.",
         "extraction": "Steam distillation of flowering tops",
         "link": "https://en.wikipedia.org/wiki/Lavender"
     },
@@ -70,7 +70,7 @@
             "Tonka Beans",
             "Amber"
         ],
-        "fun_fact": "True cinnamon is different from cassia, which is commonly sold as cinnamon in many countries",
+        "fun_fact": "True cinnamon is different from cassia, which is commonly sold as cinnamon in many countries.",
         "extraction": "Steam distillation of bark",
         "link": "https://en.wikipedia.org/wiki/Cinnamon"
     },
@@ -95,7 +95,7 @@
             "Sandalwood",
             "Rose"
         ],
-        "fun_fact": "Has been traded in the Arabian Peninsula and North Africa for over 5000 years",
+        "fun_fact": "Has been traded in the Arabian Peninsula and North Africa for over 5000 years.",
         "extraction": "Steam distillation of dried tree resin",
         "link": "https://en.wikipedia.org/wiki/Frankincense"
     },
@@ -120,7 +120,7 @@
             "Sandalwood",
             "Bergamot"
         ],
-        "fun_fact": "Unlike most ingredients, amber in perfumery is a created accord, not a natural substance",
+        "fun_fact": "Unlike most ingredients, amber in perfumery is a created accord, not a natural substance.",
         "extraction": "Blend of natural and synthetic materials",
         "link": "https://en.wikipedia.org/wiki/Amber"
     },
@@ -145,7 +145,7 @@
             "Sandalwood",
             "Amber"
         ],
-        "fun_fact": "Often called 'liquid gold' due to its high value - can be more expensive than gold by weight",
+        "fun_fact": "Often called 'liquid gold' due to its high value - can be more expensive than gold by weight.",
         "extraction": "Distillation of infected heartwood",
         "link": "https://en.wikipedia.org/wiki/Agarwood"
     },
@@ -170,7 +170,7 @@
             "Lavender",
             "Amber"
         ],
-        "fun_fact": "Contains coumarin, one of the first synthetic materials used in perfumery",
+        "fun_fact": "Contains coumarin, one of the first synthetic materials used in perfumery.",
         "extraction": "Extraction from dried beans",
         "link": "https://en.wikipedia.org/wiki/Tonka_bean"
     },
@@ -195,7 +195,7 @@
             "Amber",
             "Lavender"
         ],
-        "fun_fact": "It takes 3-4 years before a vanilla orchid produces beans",
+        "fun_fact": "It takes 3-4 years before a vanilla orchid produces beans.",
         "extraction": "Extraction from cured pods",
         "link": "https://en.wikipedia.org/wiki/Vanilla"
     },
@@ -220,7 +220,7 @@
             "Frankincense",
             "Amber"
         ],
-        "fun_fact": "It takes about 4,000 kg of rose petals to make 1 kg of rose oil",
+        "fun_fact": "It takes about 4,000 kg of rose petals to make 1 kg of rose oil.",
         "extraction": "Steam distillation of petals or solvent extraction",
         "link": "https://en.wikipedia.org/wiki/Damask_rose"
     },
@@ -245,7 +245,7 @@
             "Frankincense",
             "Vanilla"
         ],
-        "fun_fact": "A sandalwood tree must be at least 15 years old before harvesting",
+        "fun_fact": "A sandalwood tree must be at least 15 years old before harvesting.",
         "extraction": "Steam distillation of heartwood",
         "link": "https://en.wikipedia.org/wiki/Sandalwood"
     }
