@@ -116,6 +116,34 @@ This implementation:
 - Maintains a clean separation of concerns
 - Offers flexible search functionality
 
+### Using GeometryReader for Responsive Layout
+
+The app utilizes **GeometryReader** to create a dynamic and responsive layout for displaying perfume note images. This ensures images scale properly across different screen sizes while maintaining visual balance.
+```swift
+GeometryReader { geo in
+    ScrollView {
+        ZStack(alignment: .bottomTrailing) {
+            Image(note.family.rawValue.lowercased())
+                .resizable()
+                .scaledToFit()
+                .overlay {
+                    LinearGradient(stops: [
+                        Gradient.Stop(color: .clear, location: 0.8),
+                        Gradient.Stop(color: Color(.systemBackground), location: 1)
+                    ], startPoint: .top, endPoint: .bottom)
+                }
+            
+            Image(note.image)
+                .resizable()
+                .scaledToFit()
+                .frame(width: geo.size.width / 1.5, height: geo.size.height / 5)
+                .shadow(color: Color(.label), radius: 3)
+                .offset(y: 50)
+        }
+    }
+}
+```
+
 ## Credits  
 
 Project inspired by the app *JPApexPredators* from **Kenneth Jones' Udemy Course**: [iOS 18, SwiftUI 6, & Swift 6: Build iOS Apps From Scratch](https://www.udemy.com/course/ios-15-app-development-with-swiftui-3-and-swift-5/?couponCode=ST9MT120225A)  
